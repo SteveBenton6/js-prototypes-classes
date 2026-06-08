@@ -1,9 +1,14 @@
 // Example 1 -  What on Earth are Prototypes
 console.log("\nSECTION 1 - What on Earth are Prototypes");
-// No Code
+String.prototype.yell = function () {
+  return `Amazing!!! ${this.toLowerCase()}!!  Wow!`;
+};
+let greeting = "hello";
+console.log(greeting.yell());
 
 // Example 2 -  An Intro to OOP
 console.log("\nSECTION 2 - An Intro to OOP");
+// No Code
 
 // Example 3 -  Factory Functions
 console.log("\nSECTION 3 - Factory Functions");
