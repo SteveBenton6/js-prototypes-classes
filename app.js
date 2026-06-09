@@ -67,6 +67,32 @@ document.body.style.backgroundColor = color1.rgba(0.6);
 // Example 5 -  JS Classes - Syntactical Sugar
 console.log("\nSECTION 5 - JS Classes - Syntactical Sugar");
 
+class Colour {
+  constructor(r, g, b, name) {
+    this.r = r;
+    this.g = g;
+    this.b - b;
+    this.name = name;
+  }
+  innerRGB() {
+    return `(${r}, ${g}, ${b})`;
+  }
+  rgb() {
+    return `rgb(this.innerRGB()})`;
+  }
+  hex() {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  }
+  rgba(a = 1.0) {
+    return `rgba(${this.innerRGB()}, ${a})`;
+  }
+}
+const c1 = new Color(255, 67, 89, "tomato");
+console.log(c1);
+console.log(c1.rgb());
+console.log(c1.hex());
+console.log(c1.rgba(0.7));
+
 // Example 6 -  A Bit More Practice with Classes
 console.log("\nSECTION 6 - A Bit More Practice with Classes");
 
