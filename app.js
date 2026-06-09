@@ -1,5 +1,8 @@
 // Example 1 -  What on Earth are Prototypes
 console.log("\nSECTION 1 - What on Earth are Prototypes");
+
+const arr = [1, 2, 3];
+// Add String yell prototype.
 String.prototype.yell = function () {
   return `Amazing!!! ${this.toLowerCase()}!!  Wow!`;
 };
