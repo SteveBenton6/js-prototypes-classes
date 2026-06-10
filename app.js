@@ -160,3 +160,38 @@ document.body.style.backgroundColor = c1.opposite();
 
 // Example 7 -  Extends, Super, and Subclasses
 console.log("\nSECTION 7 - Extends, Super, and Subclasses");
+
+class Pet {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  eat() {
+    return `${this.name} is eating, as usual!`;
+  }
+}
+class Cat extends Pet {
+  constructor(name, age, livesLeft = 9) {
+    super(name, age);
+    this.livesLeft = livesLeft;
+  }
+  meow() {
+    return `${this.name} said meow!`;
+  }
+}
+const beckie = new Cat("Beckie", 8, 7);
+console.log(beckie);
+console.log(beckie.eat());
+console.log(beckie.meow());
+class Dog extends Pet {
+  bark() {
+    return `${this.name} said bark!`;
+  }
+  eat() {
+    return `${this.name} is scoffing too much as usual!`;
+  }
+}
+const rover = new Dog("Rover", 12);
+console.log(rover);
+console.log(rover.eat());
+console.log(rover.bark());
